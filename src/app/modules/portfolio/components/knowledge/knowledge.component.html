@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Conhecimentos</h2>
+  <div class="ul">
+    <ul *ngFor="let item of arrayKnowLedge()">
+        <li>
+          <a href="{{item.link}}" target="_blank" >
+            <img 
+            src="{{item.src}}" 
+            alt="{{item.alt}}"
+            loading="lazy"
+            width="25px"
+            height="25px"
+            >
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
