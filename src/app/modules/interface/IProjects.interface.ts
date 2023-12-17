@@ -5,6 +5,12 @@ export interface IProjects {
   width: string;
   height: string;
   description: string;
+  frameworks:  Array<{
+    src: string;
+    alt: string;
+    link: string;
+    name: string;
+  }>
   links: [
     {
       name: string;

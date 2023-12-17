@@ -6,12 +6,32 @@
 </header>
 
 <mat-dialog-content>
-  <h3>Descrição</h3>
+  <h3>Descrição:</h3>
   <article [innerHTML]="getData()?.description"></article>
+
+  <div class="container">
+    <h3>Tecnologias usadas:</h3>
+    <div class="ul">
+      <ul *ngFor="let item of getData()?.frameworks">
+        <li>
+          <a href="{{item.link}}" target="_blank">
+            <img 
+            src="{{item.src}}" 
+            alt="{{item.alt}}"
+            loading="lazy"
+            width="25px"
+            height="25px"
+            >
+          </a>
+          <h4>{{item.name}}</h4>
+        </li>
+    </ul>
+    </div>
+  </div>
 
   <div *ngFor="let item of getData()?.links">
     <nav>
-      <a [href]="item.href" target="_blank" class="btn btn-primary">
+      <a [href]="item.href" target="_blank" class="btn btn-secondary">
         {{item.name}}
       </a>
     </nav>

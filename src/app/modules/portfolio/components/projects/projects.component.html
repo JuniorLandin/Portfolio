@@ -3,7 +3,7 @@
 
   <div class="ul">
     <ul *ngFor="let item of arrayProjects()">
-      <li>
+      <li class="animated.flip">
         <button (click)="openDialog(item)">
           <img
             [src]="item.src"

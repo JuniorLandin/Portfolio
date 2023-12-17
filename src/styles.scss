@@ -1,6 +1,10 @@
+@import "/src/app/scss/animation.scss";
+
 html,
 body {
+  width: 100vw;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +33,18 @@ h1, h2, h3 {
 h1, h2, h3, a{
   color: var(--white);
   text-decoration: none;
+}
+
+.mat-typography h2{
+  font-size: 28px !important;
+  line-height: 50px !important;
+  font-family: initial !important;
+}
+
+.mat-typography h3{
+  font-size: 22px !important;
+  line-height: 50px !important;
+  font-family: initial !important;
 }
 
 p {
@@ -89,7 +105,7 @@ ul{
 
   --white: #fff;
 
-  --black: #10101a;
+  --black: #080811;
   --black-010: #2a2a30;
 
   --grey: #9b9ba0;

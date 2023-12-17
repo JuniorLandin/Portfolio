@@ -1,12 +1,18 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { IExperiences } from 'src/app/modules/interface/IExperiences.interface';
+import * as AOS from 'aos'
 
 @Component({
   selector: 'app-experiences',
   templateUrl: './experiences.component.html',
   styleUrls: ['./experiences.component.scss']
 })
-export class ExperiencesComponent {
+export class ExperiencesComponent implements OnInit{
+
+  ngOnInit(): void {
+    AOS.init()
+  }
+
   public arrayExperiences = signal<IExperiences[]>([
     {
       summary: {
