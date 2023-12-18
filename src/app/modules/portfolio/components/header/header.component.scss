@@ -1,5 +1,4 @@
 :host{
-
   .imagem-capa{
     display: flex;
     width: 100%;
@@ -13,7 +12,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
   }
 
   header{
@@ -27,6 +25,8 @@
   }
 
   aside{
+    margin-bottom: 5rem;
+    margin-top: 10px;
     p{
       text-align: center;
     }
@@ -39,6 +39,7 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
+        margin-top: 2rem;
 
         li{
           a{
