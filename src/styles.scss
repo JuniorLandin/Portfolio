@@ -110,3 +110,9 @@ ul{
 
   --grey: #9b9ba0;
 }
+
+@media(max-width: 1000px){
+  .mdc-dialog__content {
+    overflow-x: hidden !important;
+}
+}

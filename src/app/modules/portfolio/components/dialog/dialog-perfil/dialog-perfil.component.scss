@@ -11,6 +11,11 @@
     width: 100%;
     margin-bottom: -18px;
   }
+
+  .foto-perfil{
+    width: 400px;
+    height: 490px;
+  }
   
   button{
     background: none;
@@ -31,10 +36,19 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    margin: 0px !important;
   }
 }
 
 .headline{
   visibility: hidden;
+}
+
+@media (max-width: 500px) {
+  .name{
+    max-width: 75vw;
+  }
+  .foto-perfil{
+    width: 300px !important;
+    height: 390px !important;
+  }
 }

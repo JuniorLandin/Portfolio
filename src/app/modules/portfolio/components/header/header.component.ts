@@ -10,6 +10,12 @@ import * as AOS from 'aos'
 })
 export class HeaderComponent implements OnInit{
 
+  isMobile: boolean = window.innerWidth < 1000;
+
+  @HostListener('window:resize', ['$event']) onResize() {
+    this.isMobile = window.innerWidth < 1000;
+  }
+
   constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
@@ -18,8 +24,12 @@ export class HeaderComponent implements OnInit{
   }
 
   public openDialog(): void {
+    
     const dialogRef = this.dialog.open(DialogPerfilComponent, {
-      width: '40%',
+      width: this.isMobile ? '100vw' : '40vw',
+      position: {
+        top: this.isMobile ? '25%' : '5%',
+      }
     })
   }
 }

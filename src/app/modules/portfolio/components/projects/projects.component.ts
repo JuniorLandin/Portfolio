@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, HostListener, inject, signal } from '@angular/core';
 //Material
 import { MatDialog } from '@angular/material/dialog';
 //Enum
@@ -14,8 +14,15 @@ import { DialogProjectsComponent } from '../dialog/dialog-projects/dialog-projec
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
+  
+  isMobile: boolean = window.innerWidth < 1000;
 
   constructor(public dialog: MatDialog) {}
+
+
+  @HostListener('window:resize', ['$event']) onResize() {
+    this.isMobile = window.innerWidth < 1000;
+  }
 
   public arrayProjects = signal<IProjects[]>([
     {
@@ -149,7 +156,7 @@ export class ProjectsComponent {
   public openDialog(data: IProjects){
     const dialogRef = this.dialog.open(DialogProjectsComponent, {
       data,
-      panelClass: EDialogPainelClass.PROJECTS
+      panelClass: EDialogPainelClass.PROJECTS,
     });
   }
 }
