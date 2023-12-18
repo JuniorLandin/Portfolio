@@ -10,10 +10,10 @@ import * as AOS from 'aos'
 })
 export class HeaderComponent implements OnInit{
 
-  isMobile: boolean = window.innerWidth < 1000;
+  isMobile: boolean = window.innerWidth < 700;
 
   @HostListener('window:resize', ['$event']) onResize() {
-    this.isMobile = window.innerWidth < 1000;
+    this.isMobile = window.innerWidth < 700;
   }
 
   constructor(public dialog: MatDialog) {}
