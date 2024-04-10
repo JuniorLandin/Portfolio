@@ -26,6 +26,40 @@ export class ProjectsComponent {
 
   public arrayProjects = signal<IProjects[]>([
     {
+      src: 'assets/img/WebCarros.png',
+      alt: 'Projeto Web Carros',
+      title: 'Web Carros',
+      width: '180px',
+      height: '150px',
+      description: 'O projeto WebCarros é uma plataforma envolvente de venda de carros desenvolvida com React.js e estilizada com Tailwind, já o banco de dados eu utilizei o Firebase. Com uma interface moderna e responsiva, oferece aos usuários uma experiência intuitiva ao explorar uma variedade de veículos disponíveis. Além de apresentar informações detalhadas sobre cada carro, o design elegante e as funcionalidades interativas destacam as características exclusivas de cada veículo, proporcionando uma experiência de compra online envolvente e personalizada.',
+      frameworks: [
+        {
+          src: 'assets/icons/knowledge/github.svg',
+          alt: "Icone de conhecimento de GitHub",
+          link: 'https://github.com/',
+          name: 'GitHub'
+        },
+        {
+          src: 'assets/icons/knowledge/database.svg',
+          alt: "Icone de conhecimento de Banco de Dados",
+          link: 'https://firebase.google.com/docs?gad_source=1&gclid=CjwKCAjw8diwBhAbEiwA7i_sJY18lJWk7GsEb8Eeq4NnrRa56FxamRS-XpJitiV8BHXrGrsmYqu3dhoCdxIQAvD_BwE&gclsrc=aw.ds&hl=pt',
+          name: 'Firebase'
+        },
+        {
+          src: 'assets/icons/knowledge/react.svg',
+          alt: "Icone de conhecimento de React",
+          link: 'https://pt-br.react.dev/',
+          name: 'ReactJs'
+        }
+      ],
+      links: [
+        {
+          name: "Conhecer",
+          href: 'https://web-cars-xi.vercel.app'
+        }
+      ]
+    },
+    {
       src: 'assets/img/uniTaste.png',
       alt: 'Projeto',
       title: 'Lanchonete Faculdade',
@@ -116,41 +150,7 @@ export class ProjectsComponent {
           href: 'https://github.com/JuniorLandin/Project-School'
         }
       ]
-    },
-    {
-      src: 'assets/img/AutoDetaing.png',
-      alt: 'Projeto Auto Detaing',
-      title: 'Auto Detaing',
-      width: '180px',
-      height: '150px',
-      description: 'O projeto "AutoDetailing" é uma plataforma envolvente de venda de carros desenvolvida com React.js e estilizada com Sass. Com uma interface moderna e responsiva, oferece aos usuários uma experiência intuitiva ao explorar uma variedade de veículos disponíveis. Além de apresentar informações detalhadas sobre cada carro, o design elegante e as funcionalidades interativas destacam as características exclusivas de cada veículo, proporcionando uma experiência de compra online envolvente e personalizada.',
-      frameworks: [
-        {
-          src: 'assets/icons/knowledge/sass.svg',
-          alt: "Icone de conhecimento de Sass",
-          link: 'https://sass-lang.com/documentation/',
-          name: 'Sass'
-        },
-        {
-          src: 'assets/icons/knowledge/github.svg',
-          alt: "Icone de conhecimento de GitHub",
-          link: 'https://github.com/',
-          name: 'GitHub'
-        },
-        {
-          src: 'assets/icons/knowledge/react.svg',
-          alt: "Icone de conhecimento de React",
-          link: 'https://pt-br.react.dev/',
-          name: 'ReactJs'
-        }
-      ],
-      links: [
-        {
-          name: "Conhecer",
-          href: 'https://github.com/JuniorLandin/Auto-Detaing'
-        }
-      ]
-    },
+    }
   ])
 
   public openDialog(data: IProjects){
